@@ -9,7 +9,6 @@
     :root {
       --bg: #f7f2e7;
       --fg: #333;
-      --muted: #d1cfcf;
       --max-width: 660px;
       --gutter: 20px;
     }
@@ -20,7 +19,7 @@
       height: 100%;
       margin: 0;
       background: var(--bg);
-      color: var(--muted);
+      color: var(--fg);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
@@ -44,34 +43,6 @@
       box-sizing: border-box;
     }
 
-    /* Logo placeholder (top, centered) */
-    .logo {
-      display: block;
-      margin: 0 auto 20px;
-      width: 180px;
-      /* ideal displayed width on desktop */
-      height: auto;
-      max-height: 90px;
-      object-fit: contain;
-      filter: none;
-    }
-
-    /* If you don't have an image yet, show a subtle placeholder */
-    .logo-placeholder {
-      width: 180px;
-      height: 64px;
-      margin: 0 auto 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.03);
-      color: var(--muted);
-      font-weight: 600;
-      letter-spacing: 0.6px;
-      font-size: 0.95rem;
-    }
-
     h1 {
       color: var(--fg);
       font-size: clamp(1.6rem, 2.5vw, 2.4rem);
@@ -92,7 +63,7 @@
     }
 
     .small {
-      color: var(--muted);
+      color: var(--fg);
       margin-top: 18px;
       font-size: 0.9rem;
       opacity: 0.9;
@@ -206,7 +177,7 @@
       -->
       <img src="IMG-20201005-WA0004.jpg" alt="In Loving Memory" class="main-photo">
 
-      <p class="small">— With warmth,<br>the Kinderpedia team</p>
+      <p class="small">— With warmth,<br>the grandchildren</p>
     </div>
   </div>
 </body>

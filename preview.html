@@ -111,6 +111,15 @@
       background: rgba(255, 255, 255, 0.02);
     }
 
+    .main-photo {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 18px;
+      display: block;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
     .video-wrap iframe {
       position: absolute;
       top: 0;
@@ -183,12 +192,20 @@
       </p>
 
       <!-- Responsive YouTube embed -->
-      <div class="video-wrap" aria-label="Intro video">
-        <iframe src="https://www.youtube.com/embed/wDchsz8nmbo" title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
+      <!-- Main Photo -->
+      <!-- 
+        GOOGLE PHOTOS INSTRUCTIONS:
+        1. Open your photo in Google Photos.
+        2. Right-click the image and select "Copy Image Address" (or "Copy Image Link").
+        3. Paste that link into the src="" attribute below.
+        
+        NOTE: Google Photos links can sometimes expire. For a permanent solution:
+        1. Download the image.
+        2. Put it in the 'images' folder of this project.
+        3. Change src to: src="images/your-photo.jpg"
+      -->
+      <img src="https://images.unsplash.com/photo-1518057111178-44a106bad636?q=80&w=1000&auto=format&fit=crop"
+        alt="In Loving Memory" class="main-photo">
 
       <p class="small">— With warmth,<br>the Kinderpedia team</p>
     </div>

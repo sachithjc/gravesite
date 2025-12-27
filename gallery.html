@@ -11,7 +11,7 @@
             --bg: #f7f2e7;
             --fg: #333;
             --muted: #666;
-            --max-width: 900px;
+            --max-width: 1000px;
             --gutter: 20px;
         }
 
@@ -53,20 +53,43 @@
             text-align: justify;
         }
 
-        /* Gallery grid */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 14px;
+        /* Masonry-style gallery */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -6px;
         }
 
-        .gallery img {
+        .column {
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 6px;
+            box-sizing: border-box;
+        }
+
+        .column img {
             width: 100%;
-            height: auto;
-            object-fit: contain;
-            background: rgba(0, 0, 0, 0.03);
+            margin-bottom: 12px;
             border-radius: 6px;
-            padding: 4px;
+            display: block;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+            background: rgba(0, 0, 0, 0.03);
+        }
+
+        /* Tablets */
+        @media (max-width: 900px) {
+            .column {
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+
+        /* Phones */
+        @media (max-width: 600px) {
+            .column {
+                flex: 100%;
+                max-width: 100%;
+            }
         }
 
         .small {
@@ -75,12 +98,6 @@
             font-size: 0.9rem;
             color: var(--muted);
             opacity: 0.9;
-        }
-
-        @media (max-width: 420px) {
-            .lead {
-                font-size: 0.98rem;
-            }
         }
     </style>
 </head>
@@ -96,26 +113,38 @@
                 shared here as quiet memories.
             </p>
 
-            <div class="gallery">
-                <!-- Replace image filenames with your own -->
-                <img src="photos/photo1.jpg" alt="Memory 1">
-                <img src="photos/photo2.jpg" alt="Memory 2">
-                <img src="photos/photo3.jpg" alt="Memory 3">
-                <img src="photos/photo4.jpg" alt="Memory 4">
-                <img src="photos/photo5.jpg" alt="Memory 5">
-                <img src="photos/photo6.jpg" alt="Memory 6">
-                <img src="photos/photo7.jpg" alt="Memory 7">
-                <img src="photos/photo8.jpg" alt="Memory 8">
-                <img src="photos/photo9.jpg" alt="Memory 9">
-                <img src="photos/photo10.jpg" alt="Memory 10">
-                <img src="photos/photo11.jpg" alt="Memory 11">
-                <img src="photos/photo12.jpg" alt="Memory 12">
-                <img src="photos/photo13.jpg" alt="Memory 13">
-                <img src="photos/photo14.jpg" alt="Memory 14">
-                <img src="photos/photo15.jpg" alt="Memory 15">
-                <img src="photos/photo16.jpg" alt="Memory 16">
-                <img src="photos/photo17.jpg" alt="Memory 17">
-                <img src="photos/photo18.jpg" alt="Memory 18">
+            <div class="row">
+
+                <div class="column">
+                    <img src="photos/photo1.jpg" alt="Memory 1" loading="lazy">
+                    <img src="photos/photo2.jpg" alt="Memory 2" loading="lazy">
+                    <img src="photos/photo3.jpg" alt="Memory 3" loading="lazy">
+                    <img src="photos/photo4.jpg" alt="Memory 4" loading="lazy">
+                    <img src="photos/photo5.jpg" alt="Memory 5" loading="lazy">
+                </div>
+
+                <div class="column">
+                    <img src="photos/photo6.jpg" alt="Memory 6" loading="lazy">
+                    <img src="photos/photo7.jpg" alt="Memory 7" loading="lazy">
+                    <img src="photos/photo8.jpg" alt="Memory 8" loading="lazy">
+                    <img src="photos/photo9.jpg" alt="Memory 9" loading="lazy">
+                </div>
+
+                <div class="column">
+                    <img src="photos/photo10.jpg" alt="Memory 10" loading="lazy">
+                    <img src="photos/photo11.jpg" alt="Memory 11" loading="lazy">
+                    <img src="photos/photo12.jpg" alt="Memory 12" loading="lazy">
+                    <img src="photos/photo13.jpg" alt="Memory 13" loading="lazy">
+                </div>
+
+                <div class="column">
+                    <img src="photos/photo14.jpg" alt="Memory 14" loading="lazy">
+                    <img src="photos/photo15.jpg" alt="Memory 15" loading="lazy">
+                    <img src="photos/photo16.jpg" alt="Memory 16" loading="lazy">
+                    <img src="photos/photo17.jpg" alt="Memory 17" loading="lazy">
+                    <img src="photos/photo18.jpg" alt="Memory 18" loading="lazy">
+                </div>
+
             </div>
 
             <p class="small">

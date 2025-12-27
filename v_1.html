@@ -62,12 +62,41 @@
             /* keep readable line length */
         }
 
+        .inline-link {
+            color: var(--fg);
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+            opacity: 0.85;
+        }
+
+        .inline-link:hover {
+            opacity: 1;
+        }
+
         .small {
             color: var(--muted);
             margin-top: 18px;
             font-size: 0.9rem;
             opacity: 0.9;
             text-align: center;
+        }
+
+        .nav {
+            margin-top: 28px;
+            font-size: 0.9rem;
+        }
+
+        .nav a {
+            color: var(--fg);
+            text-decoration: none;
+            margin: 0 10px;
+            opacity: 0.75;
+        }
+
+        .nav a:hover {
+            opacity: 1;
+            text-decoration: underline;
         }
 
         /* Responsive YouTube embed */
@@ -99,6 +128,7 @@
             height: 100%;
             border: 0;
         }
+
 
         /* small tweak for very small screens */
         @media (max-width:420px) {
@@ -145,7 +175,7 @@
 
             <img src="IMG-20201005-WA0004.jpg" alt="In Loving Memory" class="main-photo">
             <p class="lead">
-                This website is a small space of remembrance, created with love for my grandparents - Benjamin Abraham
+                This website is a small space of remembrance, created with love for our grandparents - Benjamin Abraham
                 and Molly Benjamin.
 
                 To those who knew them well, they were anchors of family and home. To those who met them briefly, they
@@ -160,7 +190,21 @@
                 bring comfort, reflection, and a sense of connection—just as they did in life.
             </p>
 
+            <p class="lead">
+                If you would like to watch the
+                <a href="funerals.html" class="inline-link">funeral services</a>,
+                read the
+                <a href="testimonials.html" class="inline-link">memories and testimonials</a>
+                shared by family and friends,
+                or
+                <a href="testimonial_form.html" class="inline-link">leave a message of your own</a>,
+                you are welcome to do so.
+                For anything else, please feel free to
+                <a href="contact_us.html" class="inline-link">reach out to us</a>.
+            </p>
+
             <p class="small">— With warmth,<br>the grandchildren</p>
+
         </div>
     </div>
 </body>

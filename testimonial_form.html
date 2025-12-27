@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — In Remembrance</title>
+
+    <style>
+        :root {
+            --bg: #f7f2e7;
+            --fg: #333;
+            --muted: #666;
+            --max-width: 660px;
+            --gutter: 20px;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            background: var(--bg);
+            color: var(--fg);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .page {
+            min-height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: calc(var(--gutter) * 2);
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .card {
+            width: 100%;
+            max-width: var(--max-width);
+            padding: 28px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+            margin: 0 0 18px;
+            line-height: 1.1;
+        }
+
+        .lead {
+            font-size: 1.02rem;
+            line-height: 1.6;
+            text-align: justify;
+            margin: 0 auto 26px;
+            max-width: 66ch;
+        }
+
+        .main-photo {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 18px;
+            display: block;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-box {
+            margin-top: 26px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .email {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 1rem;
+            color: var(--fg);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+            padding-bottom: 2px;
+        }
+
+        .email:hover {
+            border-bottom-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .small {
+            margin-top: 22px;
+            font-size: 0.9rem;
+            color: var(--muted);
+            opacity: 0.9;
+        }
+
+        .form-wrap {
+            margin: 28px auto;
+            max-width: 100%;
+        }
+
+        .form-wrap iframe {
+            width: 100%;
+            height: 1100px;
+            border: 0;
+        }
+
+
+        @media (max-width: 420px) {
+            .card {
+                padding: 16px;
+            }
+
+            .lead {
+                font-size: 0.98rem;
+            }
+
+            h1 {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (min-width: 900px) {
+            .card {
+                padding: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="card">
+
+            <h1>Share a Memory</h1>
+
+            <p class="lead">
+                This website was created as a space of remembrance. If you knew our grandparents and would like to share
+                a memory, a photograph, or a few words, you are
+                warmly invited to do so. Even the smallest recollections often carry great meaning. You can choose to
+                have it displayed on the website or privately read by the family. Separately, if you wish to share a
+                photograph or video, please
+                use our <a href="https://forms.gle/UmtkNUZy224Sjrix5">media upload form</a>.
+            </p>
+
+            <div class="form-wrap">
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSdsXoBg6ofunmT4hQvPY0MAxyQWaX5V4FDAdFtrhtVJnxvviQ/viewform?embedded=true">
+                    Loading…
+                </iframe>
+            </div>
+
+            <p class="small">
+                Thank you for your kind words. Testimonials are reviewed and will be added to the website in a day or
+                two.
+            </p>
+
+        </div>
+    </div>
+</body>
+
+</html>

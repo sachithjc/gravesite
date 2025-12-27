@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gallery — In Remembrance</title>
+
+    <style>
+        :root {
+            --bg: #f7f2e7;
+            --fg: #333;
+            --muted: #666;
+            --max-width: 900px;
+            --gutter: 20px;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            background: var(--bg);
+            color: var(--fg);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .page {
+            min-height: 100%;
+            display: flex;
+            justify-content: center;
+            padding: calc(var(--gutter) * 2);
+            box-sizing: border-box;
+        }
+
+        .card {
+            width: 100%;
+            max-width: var(--max-width);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+            margin: 0 0 20px;
+        }
+
+        .lead {
+            max-width: 66ch;
+            margin: 0 auto 36px;
+            font-size: 1.02rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        /* Gallery grid */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 14px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 6px;
+            display: block;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+        }
+
+        .small {
+            margin-top: 32px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--muted);
+            opacity: 0.9;
+        }
+
+        @media (max-width: 420px) {
+            .lead {
+                font-size: 0.98rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="card">
+
+            <h1>Gallery</h1>
+
+            <p class="lead">
+                A collection of photographs from different moments in their lives,
+                shared here as quiet memories.
+            </p>
+
+            <div class="gallery">
+                <!-- Replace image filenames with your own -->
+                <img src="photos/photo1.jpg" alt="Memory 1">
+                <img src="photos/photo2.jpg" alt="Memory 2">
+                <img src="photos/photo3.jpg" alt="Memory 3">
+                <img src="photos/photo4.jpg" alt="Memory 4">
+                <img src="photos/photo5.jpg" alt="Memory 5">
+                <img src="photos/photo6.jpg" alt="Memory 6">
+                <img src="photos/photo7.jpg" alt="Memory 7">
+                <img src="photos/photo8.jpg" alt="Memory 8">
+                <img src="photos/photo9.jpg" alt="Memory 9">
+                <img src="photos/photo10.jpg" alt="Memory 10">
+                <img src="photos/photo11.jpg" alt="Memory 11">
+                <img src="photos/photo12.jpg" alt="Memory 12">
+                <img src="photos/photo13.jpg" alt="Memory 13">
+                <img src="photos/photo14.jpg" alt="Memory 14">
+                <img src="photos/photo15.jpg" alt="Memory 15">
+                <img src="photos/photo16.jpg" alt="Memory 16">
+                <img src="photos/photo17.jpg" alt="Memory 17">
+                <img src="photos/photo18.jpg" alt="Memory 18">
+            </div>
+
+            <p class="small">
+                Photographs are shared with love and remembrance.
+            </p>
+
+        </div>
+    </div>
+</body>
+
+</html>

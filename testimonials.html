@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shared Memories — In Remembrance</title>
+
+    <style>
+        :root {
+            --bg: #f7f2e7;
+            --fg: #333;
+            --muted: #666;
+            --max-width: 660px;
+            --gutter: 20px;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            background: var(--bg);
+            color: var(--fg);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .page {
+            min-height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: calc(var(--gutter) * 2);
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .card {
+            width: 100%;
+            max-width: var(--max-width);
+            padding: 28px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+            margin: 0 0 18px;
+            line-height: 1.1;
+        }
+
+        .lead {
+            font-size: 1.02rem;
+            line-height: 1.6;
+            text-align: justify;
+            margin: 0 auto 30px;
+            max-width: 66ch;
+        }
+
+        .testimonial {
+            margin: 28px auto;
+            max-width: 66ch;
+            text-align: left;
+            font-size: 1rem;
+            line-height: 1.6;
+            padding-left: 16px;
+            border-left: 2px solid rgba(0, 0, 0, 0.12);
+        }
+
+        .testimonial p {
+            margin: 0 0 8px;
+        }
+
+        .attribution {
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .small {
+            margin-top: 34px;
+            font-size: 0.9rem;
+            color: var(--muted);
+            opacity: 0.9;
+        }
+
+        .nav {
+            margin-top: 28px;
+            font-size: 0.9rem;
+        }
+
+        .nav a {
+            color: var(--fg);
+            text-decoration: none;
+            margin: 0 10px;
+            opacity: 0.75;
+        }
+
+        .nav a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .main-photo {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 18px;
+            display: block;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 420px) {
+            .card {
+                padding: 16px;
+            }
+
+            .lead {
+                font-size: 0.98rem;
+            }
+
+            h1 {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (min-width: 900px) {
+            .card {
+                padding: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="card">
+
+            <h1>Shared Memories</h1>
+
+            <img src="veranda.jpg" alt="veranda" class="main-photo">
+            <p class="lead">
+                This page brings together memories and reflections shared by family, friends,
+                and those whose lives were touched by Benjamin Abraham and Molly Benjamin.
+                Each message is shared with care and gratitude.
+            </p>
+
+            <!-- Testimonial 1 -->
+            <div class="testimonial">
+                <p>
+                    He always had time to listen, no matter how busy the day was.
+                    Conversations with him felt steady and grounding, like being at home.
+                </p>
+                <div class="attribution">— Family friend</div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial">
+                <p>
+                    Her kindness was quiet but constant. She noticed the small things
+                    and made people feel remembered.
+                </p>
+                <div class="attribution">— Neighbour</div>
+            </div>
+
+            <!-- Add more testimonials below by copying the block above -->
+
+            <p class="small">
+                This page is updated from time to time as memories are shared.
+            </p>
+
+            <div class="nav">
+                <a href="funerals.html">Funeral Videos</a>
+                ·
+                <a href="testimonial_form.html">Share A Testimonial</a>
+                ·
+                <a href="contact_us.html">Contact Us</a>
+                .
+                <a href="testimonials.html">Testimonials</a>
+                .
+                <a href="gallery.html">Gallery</a>
+                .
+                <a href="timeline.html">Timeline</a>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

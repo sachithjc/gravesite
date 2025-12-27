@@ -62,12 +62,41 @@
       /* keep readable line length */
     }
 
+    .inline-link {
+      color: var(--fg);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      opacity: 0.85;
+    }
+
+    .inline-link:hover {
+      opacity: 1;
+    }
+
     .small {
       color: var(--muted);
       margin-top: 18px;
       font-size: 0.9rem;
       opacity: 0.9;
       text-align: center;
+    }
+
+    .nav {
+      margin-top: 28px;
+      font-size: 0.9rem;
+    }
+
+    .nav a {
+      color: var(--fg);
+      text-decoration: none;
+      margin: 0 10px;
+      opacity: 0.75;
+    }
+
+    .nav a:hover {
+      opacity: 1;
+      text-decoration: underline;
     }
 
     /* Responsive YouTube embed */
@@ -99,6 +128,7 @@
       height: 100%;
       border: 0;
     }
+
 
     /* small tweak for very small screens */
     @media (max-width:420px) {
@@ -138,46 +168,44 @@
   <div class="page">
     <div class="card">
 
-      <!--
-        LOGO:
-        Option A (same folder): save logo as "logo.png" next to this HTML file:
-        <img src="logo.png" alt="Kinderpedia logo" class="logo">
-
-        Option B (assets folder): save at assets/logo.png:
-        <img src="assets/logo.png" alt="Kinderpedia logo" class="logo">
-
-        If you don't have the file yet, the placeholder below will show instead.
-      -->
-
       <!-- Placeholder shown until you add a real image file -->
       <div class="logo-placeholder" aria-hidden="true"></div>
 
-      <!-- Example of real logo usage (comment out placeholder & uncomment the img when you add the file) -->
-      <!-- <img src="logo.png" alt="Kinderpedia logo" class="logo"> -->
+      <h1>Welcome</h1>
 
-      <h1>Our Website is Coming Soon</h1>
-
-      <!-- Justified centralised body text with lorem ipsum -->
+      <img src="IMG-20201005-WA0004.jpg" alt="In Loving Memory" class="main-photo">
       <p class="lead">
-        We’re working on something wonderful for them. Thank you for your patience!
+
+        This website is a small space of remembrance, created with love for our grandparents - Benjamin Abraham
+        and Molly Benjamin.
+
+        To those who knew them well, they were anchors of family and home. To those who met them briefly, they
+        left warmth that
+        lingered. And to those who never had the chance to meet them, this space offers a glimpse into who they
+        were and what they meant.
+
+        Here you will find photographs, memories, stories, and moments from their lives—simple things that
+        together tell a beautiful story. This is not meant to be a complete account, but a heartfelt one.
+
+        If you are visiting this page, thank you for taking a moment to remember them with us. May this space
+        bring comfort, reflection, and a sense of connection—just as they did in life.
       </p>
 
-      <!-- Responsive YouTube embed -->
-      <!-- Main Photo -->
-      <!-- 
-        GOOGLE PHOTOS INSTRUCTIONS:
-        1. Open your photo in Google Photos.
-        2. Right-click the image and select "Copy Image Address" (or "Copy Image Link").
-        3. Paste that link into the src="" attribute below.
-        
-        NOTE: Google Photos links can sometimes expire. For a permanent solution:
-        1. Download the image.
-        2. Put it in the 'images' folder of this project.
-        3. Change src to: src="images/your-photo.jpg"
-      -->
-      <img src="IMG-20201005-WA0004.jpg" alt="In Loving Memory" class="main-photo">
+      <p class="lead">
+        If you would like to watch the
+        <a href="funerals.html" class="inline-link">funeral services</a>,
+        read the
+        <a href="testimonials.html" class="inline-link">memories and testimonials</a>
+        shared by family and friends,
+        or
+        <a href="testimonial_form.html" class="inline-link">leave a message of your own</a>,
+        you are welcome to do so.
+        For anything else, please feel free to
+        <a href="contact_us.html" class="inline-link">reach out to us</a>.
+      </p>
 
       <p class="small">— With warmth,<br>the grandchildren</p>
+
     </div>
   </div>
 </body>

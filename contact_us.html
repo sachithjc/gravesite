@@ -1,101 +1,143 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — In Remembrance</title>
+
     <style>
         :root {
-            --primary-color: #2563eb;
-            --secondary-color: #1e293b;
-            --bg-color: #f8fafc;
-            --text-color: #334155;
-            --border-color: #e2e8f0;
+            --bg: #f7f2e7;
+            --fg: #333;
+            --muted: #666;
+            --max-width: 660px;
+            --gutter: 20px;
         }
 
+        html,
         body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
+            height: 100%;
             margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            background: var(--bg);
+            color: var(--fg);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        .container {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        .page {
+            min-height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: calc(var(--gutter) * 2);
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .card {
             width: 100%;
-            max-width: 600px;
+            max-width: var(--max-width);
+            padding: 28px;
+            box-sizing: border-box;
         }
 
         h1 {
-            color: var(--primary-color);
-            font-size: 2rem;
-            margin-bottom: 1rem;
+            font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+            margin: 0 0 18px;
+            line-height: 1.1;
         }
 
-        p {
-            margin-bottom: 1rem;
+        .lead {
+            font-size: 1.02rem;
+            line-height: 1.6;
+            text-align: justify;
+            margin: 0 auto 26px;
+            max-width: 66ch;
         }
 
-        .form-group {
-            margin-bottom: 1rem;
+        .contact-box {
+            margin-top: 26px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            text-align: center;
         }
 
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
+        .email {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 1rem;
+            color: var(--fg);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+            padding-bottom: 2px;
         }
 
-        input,
-        textarea {
-            width: 100%;
-            padding: 0.5rem;
-            border: 1px solid var(--border-color);
-            border-radius: 0.25rem;
-            margin-bottom: 0.5rem;
+        .email:hover {
+            border-bottom-color: rgba(0, 0, 0, 0.6);
         }
 
-        button {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 0.25rem;
-            cursor: pointer;
+        .small {
+            margin-top: 22px;
+            font-size: 0.9rem;
+            color: var(--muted);
+            opacity: 0.9;
         }
 
-        button:hover {
-            background-color: #1e293b;
+        @media (max-width: 420px) {
+            .card {
+                padding: 16px;
+            }
+
+            .lead {
+                font-size: 0.98rem;
+            }
+
+            h1 {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (min-width: 900px) {
+            .card {
+                padding: 36px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Contact Us</h1>
-        <form>
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+    <div class="page">
+        <div class="card">
+
+            <h1>Contact</h1>
+
+            <p class="lead">
+                This website was created as a space of remembrance.
+
+                If you knew our grandparents and would like to share a memory, a photograph, or a few words, you are
+                warmly invited to reach out. Even the smallest recollections often carry great meaning.
+
+                If you are here because you are considering creating a similar website for someone you love, you are
+                welcome to get in touch as well. These memorial spaces are made slowly and thoughtfully, shaped by
+                stories, images, and care.
+            </p>
+
+            <div class="contact-box">
+                <p>You can reach us at:</p>
+                <a href="mailto:youremail@example.com" class="email">
+                    youremail@example.com
+                </a>
             </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-            </div>
-            <button type="submit">Send</button>
-        </form>
+
+            <p class="small">
+                Messages are read with care, and replies may take some time.
+                <br>
+                Thank you for understanding.
+            </p>
+
+        </div>
     </div>
 </body>
 

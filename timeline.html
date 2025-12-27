@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Timeline — In Remembrance</title>
+
+    <style>
+        :root {
+            --bg: #f7f2e7;
+            --fg: #333;
+            --muted: #666;
+            --line: rgba(0, 0, 0, 0.15);
+            --max-width: 900px;
+            --gutter: 20px;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            background: var(--bg);
+            color: var(--fg);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .page {
+            min-height: 100%;
+            display: flex;
+            justify-content: center;
+            padding: calc(var(--gutter) * 2);
+            box-sizing: border-box;
+        }
+
+        .card {
+            width: 100%;
+            max-width: var(--max-width);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+            margin-bottom: 20px;
+        }
+
+        .lead {
+            max-width: 66ch;
+            margin: 0 auto 48px;
+            font-size: 1.02rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        /* Timeline layout */
+        .timeline {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: var(--line);
+            transform: translateX(-50%);
+        }
+
+        .event {
+            position: relative;
+            width: 50%;
+            padding: 0 30px 40px;
+            box-sizing: border-box;
+        }
+
+        .event.left {
+            left: 0;
+            text-align: right;
+        }
+
+        .event.right {
+            left: 50%;
+            text-align: left;
+        }
+
+        .event::before {
+            content: "";
+            position: absolute;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            background: var(--fg);
+            border-radius: 50%;
+        }
+
+        .event.left::before {
+            right: -5px;
+        }
+
+        .event.right::before {
+            left: -5px;
+        }
+
+        .event-card {
+            background: rgba(255, 255, 255, 0.6);
+            padding: 16px 18px;
+            border-radius: 6px;
+        }
+
+        .event h3 {
+            margin: 0 0 6px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .event p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .date {
+            margin-top: 6px;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .nav {
+            margin-top: 28px;
+            font-size: 0.9rem;
+        }
+
+        .nav a {
+            color: var(--fg);
+            text-decoration: none;
+            margin: 0 10px;
+            opacity: 0.75;
+        }
+
+        .nav a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+            .timeline::before {
+                left: 20px;
+            }
+
+            .event {
+                width: 100%;
+                padding-left: 50px;
+                padding-right: 0;
+                text-align: left;
+            }
+
+            .event.left,
+            .event.right {
+                left: 0;
+            }
+
+            .event::before {
+                left: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="card">
+
+            <h1>Timeline</h1>
+
+            <p class="lead">
+                A gentle outline of moments and milestones from their lives,
+                shared here to remember the paths they walked.
+            </p>
+
+            <ul class="timeline">
+
+                <li class="event left">
+                    <div class="event-card">
+                        <h3>Early Years</h3>
+                        <p>
+                            Born and raised among family and community,
+                            shaping the values that would guide their lives.
+                        </p>
+                        <div class="date">1930s–1940s</div>
+                    </div>
+                </li>
+
+                <li class="event right">
+                    <div class="event-card">
+                        <h3>Marriage</h3>
+                        <p>
+                            A partnership built on care, patience, and shared faith,
+                            lasting through the years.
+                        </p>
+                        <div class="date">1950s</div>
+                    </div>
+                </li>
+
+                <li class="event left">
+                    <div class="event-card">
+                        <h3>Family Life</h3>
+                        <p>
+                            Raising children, welcoming grandchildren,
+                            and building a home filled with warmth.
+                        </p>
+                        <div class="date">1960s–1990s</div>
+                    </div>
+                </li>
+
+                <li class="event right">
+                    <div class="event-card">
+                        <h3>Later Years</h3>
+                        <p>
+                            Quiet days, familiar routines,
+                            and time spent surrounded by loved ones.
+                        </p>
+                        <div class="date">2000s–2020</div>
+                    </div>
+
+                </li>
+
+            </ul>
+            <div class="nav">
+                <a href="index.html">Home</a>
+                ·
+                <a href="funerals.html">Funeral Videos</a>
+                ·
+                <a href="testimonials.html">Testimonials</a>
+                ·
+                <a href="gallery.html">Gallery</a>
+                ·
+                <a href="timeline.html">Timeline</a>
+                ·
+                <a href="testimonial_form.html">Share a Testimonial</a>
+                ·
+                <a href="submit_images.html">Share Photos</a>
+                ·
+                <a href="contact_us.html">Contact</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

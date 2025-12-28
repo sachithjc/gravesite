@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Family Tree</title>
+    <link rel="shortcut icon" href="https://i.imgur.com/bMdrjk0.png" type="image/ico" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <style>
+        /* --- CSS UNCHANGED --- */
+        :root {
+            --dark: #111;
+            --light: #fff;
+            --accent1: #eaddc1;
+            --accent2: #f7f2e7;
+            --accent3: #eaddc1;
+
+            --main-font: Montserrat, helvetica, sans-serif;
+            --headings: Montserrat, helvetica, sans-serif;
+
+            --married-icon: url(https://i.imgur.com/CGsfMeA.png)center no-repeat;
+            --together-icon: url(https://i.imgur.com/4fWwDop.png)center no-repeat;
+            --separated-icon: url(https://i.imgur.com/YVlmIq5.png)center no-repeat;
+        }
+
+        body {
+            margin: 0;
+            background: var(--accent2);
+            font-family: var(--main-font);
+            color: var(--dark);
+            font-size: 9px;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--dark);
+        }
+
+        b {
+            font-size: 11px;
+        }
+
+        header {
+            padding: 0 0 2vw 0;
+            text-transform: uppercase;
+            font-family: var(--headings);
+        }
+
+        header h1 {
+            font-weight: 200;
+            font-size: 40px;
+            letter-spacing: 6px;
+            padding-left: 6px;
+            margin: 0;
+        }
+
+        header h2 {
+            font-size: 15px;
+            letter-spacing: 4px;
+            padding-left: 4px;
+            color: var(--light);
+            text-shadow: 1.3px 1.3px .5px rgba(0, 0, 0, 0.4);
+            margin: 0;
+        }
+
+        .tree {
+            margin: 2vw;
+            text-align: center;
+        }
+
+        .tree ul,
+        .tree li {
+            margin: 0;
+            padding: 0;
+        }
+
+        .tree ul {
+            padding-top: 20px;
+            position: relative;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tree img {
+            display: block;
+            margin-bottom: 7px;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            background: var(--accent1);
+            border: 7px solid var(--light);
+        }
+
+        .tree li {
+            position: relative;
+            padding: 40px 10px 0 10px;
+        }
+
+        .tree li a,
+        .tree li span {
+            display: inline-block;
+            position: relative;
+            z-index: 1 !important;
+        }
+
+        .tree li a+a {
+            margin-left: 40px;
+            margin-right: -4px;
+        }
+
+        .tree li:before,
+        .tree li:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            border-top: 7px solid var(--accent3);
+            width: 50%;
+            height: 45px;
+        }
+
+        .tree li:after {
+            right: auto;
+            left: 50%;
+            border-left: 7px solid var(--accent3);
+            height: 90px;
+        }
+
+        .tree li:only-child:after,
+        .tree li:only-child:before {
+            display: none;
+        }
+
+        .tree li:only-child {
+            padding-top: 0;
+        }
+
+        .tree li:first-child:before,
+        .tree li:last-child:after {
+            border: none;
+        }
+
+        .tree li:last-child:before {
+            border-right: 7px solid var(--accent3);
+            left: 0;
+            height: 90px;
+        }
+
+        .tree ul ul:before {
+            content: '';
+            position: absolute;
+            top: -82px;
+            left: 50%;
+            border-left: 7px solid var(--accent3);
+            height: 102px;
+        }
+
+        .tree li a+a:before {
+            content: '';
+            position: absolute;
+            border-bottom: 7px solid var(--accent3);
+            top: 33px;
+            left: -44px;
+            width: 44px;
+        }
+
+        .married:before {
+            background: var(--married-icon);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="tree">
+
+        <header>
+            <h1>Benjamin Family Tree</h1>
+        </header>
+
+        <ul id="whole">
+
+            <!-- Grandparents -->
+            <li class="parent">
+                <a><img src="URL"><b>Benjamin Abraham</b></a>
+                <a class="married"><img src="URL"><b>Molly Benjamin</b></a>
+
+                <!-- Children -->
+                <ul class="children">
+
+                    <!-- Abraham Benjamin -->
+                    <li class="child">
+                        <a><img src="URL"><b>Abraham Benjamin</b></a>
+                        <a class="married"><img src="URL"><b>Shema Abraham</b></a>
+
+                        <ul class="grandchildren">
+                            <li class="grandchild"><a><img src="URL"><b>Mishma Abraham</b></a></li>
+                            <li class="grandchild"><a><img src="URL"><b>Benjamin Abraham</b></a></li>
+                            <li class="grandchild"><a><img src="URL"><b>Naomi Abraham</b></a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Meena Benjamin -->
+                    <li class="child">
+                        <a><img src="URL"><b>Meena Benjamin</b></a>
+                        <a class="married"><img src="URL"><b>Joseph NR</b></a>
+
+                        <ul class="grandchildren">
+                            <li class="grandchild"><a><img src="URL"><b>Sachith Cheruvatur</b></a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Bettina Benjamin -->
+                    <li class="child">
+                        <a><img src="URL"><b>Bettina Benjamin</b></a>
+
+                        <ul class="grandchildren">
+                            <li class="grandchild"><a><img src="URL"><b>Abishai</b></a></li>
+                            <li class="grandchild"><a><img src="URL"><b>Tabitha</b></a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
+
+        </ul>
+
+    </div>
+
+</body>
+
+</html>

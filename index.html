@@ -222,6 +222,85 @@
       background: rgba(0, 0, 0, 0.03);
     }
 
+    /* Timeline layout */
+    .timeline {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      background: var(--line);
+      transform: translateX(-50%);
+    }
+
+    .event {
+      position: relative;
+      width: 50%;
+      padding: 0 30px 40px;
+      box-sizing: border-box;
+    }
+
+    .event.left {
+      left: 0;
+      text-align: right;
+    }
+
+    .event.right {
+      left: 50%;
+      text-align: left;
+    }
+
+    .event::before {
+      content: "";
+      position: absolute;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      background: var(--fg);
+      border-radius: 50%;
+    }
+
+    .event.left::before {
+      right: -5px;
+    }
+
+    .event.right::before {
+      left: -5px;
+    }
+
+    .event-card {
+      background: rgba(255, 255, 255, 0.6);
+      padding: 16px 18px;
+      border-radius: 6px;
+    }
+
+    .event h3 {
+      margin: 0 0 6px;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .event p {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .date {
+      margin-top: 6px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+
     /* Masonry-style gallery */
     .row {
       display: flex;
@@ -421,6 +500,62 @@
         </div>
 
       </div>
+
+      <h1>Timeline</h1>
+
+      <p class="lead">
+        A gentle outline of moments and milestones from their lives,
+        shared here to remember the paths they walked.
+      </p>
+
+      <ul class="timeline">
+
+        <li class="event left">
+          <div class="event-card">
+            <h3>Early Years</h3>
+            <p>
+              Born and raised among family and community,
+              shaping the values that would guide their lives.
+            </p>
+            <div class="date">1930s–1940s</div>
+          </div>
+        </li>
+
+        <li class="event right">
+          <div class="event-card">
+            <h3>Marriage</h3>
+            <p>
+              A partnership built on care, patience, and shared faith,
+              lasting through the years.
+            </p>
+            <div class="date">1950s</div>
+          </div>
+        </li>
+
+        <li class="event left">
+          <div class="event-card">
+            <h3>Family Life</h3>
+            <p>
+              Raising children, welcoming grandchildren,
+              and building a home filled with warmth.
+            </p>
+            <div class="date">1960s–1990s</div>
+          </div>
+        </li>
+
+        <li class="event right">
+          <div class="event-card">
+            <h3>Later Years</h3>
+            <p>
+              Quiet days, familiar routines,
+              and time spent surrounded by loved ones.
+            </p>
+            <div class="date">2000s–2020</div>
+          </div>
+
+        </li>
+
+      </ul>
 
       <h1>Funeral Videos</h1>
 

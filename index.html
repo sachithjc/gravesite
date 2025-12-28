@@ -135,6 +135,54 @@
       border: 0;
     }
 
+    .bio {
+      display: flex;
+      gap: 20px;
+      margin: 48px auto;
+      max-width: 66ch;
+      align-items: flex-start;
+    }
+
+    .bio.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .bio img {
+      width: 160px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      flex-shrink: 0;
+    }
+
+    .bio h2 {
+      margin: 0 0 6px;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    .bio .dates {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 12px;
+    }
+
+    /* Mobile: stack image above text */
+    @media (max-width: 600px) {
+
+      .bio,
+      .bio.reverse {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .bio img {
+        width: 60%;
+        max-width: 220px;
+      }
+    }
+
 
     /* small tweak for very small screens */
     @media (max-width:420px) {
@@ -210,7 +258,39 @@
         <a href="contact_us.html" class="inline-link">reach out to us</a>.
       </p>
 
-      <p class="small">— With warmth,<br>the grandchildren</p>
+      <p class="small">— With warmth, the grandchildren</p>
+
+      <div class="bio">
+        <div>
+          <h2>Benjamin Abraham</h2>
+          <div class="dates">(born … — passed …)</div>
+          <p class="lead">
+            This is a short stand-in paragraph for Appapa’s biography.
+            It might speak of his quiet strength, the values he lived by,
+            the routines that shaped his days, and the care he showed to
+            family and community. This space can grow with stories,
+            memories, and reflections over time.
+          </p>
+        </div>
+
+        <img src="benjamin.jpg" alt="Benjamin Abraham">
+      </div>
+
+      <div class="bio reverse">
+        <div>
+          <h2>Molly Benjamin</h2>
+          <div class="dates">(born … — passed …)</div>
+          <p class="lead">
+            This is a short stand-in paragraph for Ammama’s biography.
+            It might reflect her warmth, her attentiveness to small things,
+            the ways she made others feel at ease, and the quiet presence
+            she carried through the years. Like all lives, her story
+            unfolds gently and in layers.
+          </p>
+        </div>
+
+        <img src="molly.jpg" alt="Molly Benjamin">
+      </div>
 
     </div>
   </div>

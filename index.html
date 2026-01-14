@@ -62,9 +62,20 @@
     }
 
     .zoomable:focus {
-      transform: scale(3);
-      z-index: 5;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1);
+      z-index: 1000;
       outline: none;
+      cursor: zoom-out;
+
+      width: auto;
+      height: auto;
+      max-width: 90vw;
+      max-height: 90vh;
+
+      object-fit: contain;
     }
 
 
@@ -861,7 +872,7 @@
       <h1>Funeral Videos</h1>
 
       <p class="lead">
-        This page holds recordings from the funeral services, shared here for family and friends
+        This section holds recordings from the funeral services, shared here for family and friends
         who may wish to watch, remember, or revisit these moments in their own time.
         Please feel free to watch quietly and at your own pace.
       </p>

@@ -31,16 +31,42 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
+    /* .page {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content:  flex-start;
+      padding: calc(var(--gutter) * 2);
+      box-sizing: border-box;
+      text-align: center;
+    } */
+
     .page {
       min-height: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      padding: calc(var(--gutter) * 2);
-      box-sizing: border-box;
-      text-align: center;
+      justify-content: flex-start;
+      padding: calc(var(--gutter) * 1.2) var(--gutter);
     }
+
+    .zoomable {
+      cursor: zoom-in;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .zoomable:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    }
+
+    /* Click-to-focus effect */
+    .zoomable:active {
+      transform: scale(1.15);
+      z-index: 10;
+    }
+
 
     .card {
       width: 100%;
@@ -174,6 +200,7 @@
       flex-direction: row-reverse;
       text-align: right;
     }
+
     .bio h1 {
       margin-top: 0;
     }
@@ -358,6 +385,38 @@
       flex-wrap: wrap;
       margin: 0 -6px;
     }
+
+    @media (max-width: 600px) {
+
+      .timeline::before {
+        left: 12px;
+      }
+
+      .event {
+        width: 100%;
+        left: 0 !important;
+        padding: 0 0 28px 36px;
+        text-align: left;
+      }
+
+      .event::before {
+        left: 8px;
+      }
+
+      .event h3 {
+        font-size: 0.95rem;
+      }
+
+      .event p {
+        font-size: 0.88rem;
+        line-height: 1.45;
+      }
+
+      .date {
+        font-size: 0.8rem;
+      }
+    }
+
 
     /* Mobile: stack image above text */
     @media (max-width: 600px) {
@@ -593,34 +652,34 @@
       <div class="row">
 
         <div class="column">
-          <img src="photos/photo1.jpg" alt="Memory 1" loading="lazy">
-          <img src="photos/photo2.jpg" alt="Memory 2" loading="lazy">
-          <img src="photos/photo3.jpg" alt="Memory 3" loading="lazy">
-          <img src="photos/photo4.jpg" alt="Memory 4" loading="lazy">
-          <img src="photos/photo5.jpg" alt="Memory 5" loading="lazy">
-          <img src="photos/photo14.jpg" alt="Memory 14" loading="lazy">
-          <img src="photos/photo17.jpg" alt="Memory 17" loading="lazy">
+          <img src="photos/photo1.jpg" alt="Memory 1" class="zoomable" loading="lazy">
+          <img src="photos/photo2.jpg" alt="Memory 2" class="zoomable" loading="lazy">
+          <img src="photos/photo3.jpg" alt="Memory 3" class="zoomable" loading="lazy">
+          <img src="photos/photo4.jpg" alt="Memory 4" class="zoomable" loading="lazy">
+          <img src="photos/photo5.jpg" alt="Memory 5" class="zoomable" loading="lazy">
+          <img src="photos/photo14.jpg" alt="Memory 14" class="zoomable" loading="lazy">
+          <img src="photos/photo17.jpg" alt="Memory 17" class="zoomable" loading="lazy">
 
 
         </div>
 
         <div class="column">
-          <img src="photos/photo6.jpg" alt="Memory 6" loading="lazy">
-          <img src="photos/photo7.jpg" alt="Memory 7" loading="lazy">
-          <img src="photos/photo8.jpg" alt="Memory 8" loading="lazy">
-          <img src="photos/photo9.jpg" alt="Memory 9" loading="lazy">
-          <img src="photos/photo15.jpg" alt="Memory 15" loading="lazy">
-          <img src="photos/photo18.jpg" alt="Memory 18" loading="lazy">
+          <img src="photos/photo6.jpg" alt="Memory 6" class="zoomable" loading="lazy">
+          <img src="photos/photo7.jpg" alt="Memory 7" class="zoomable" loading="lazy">
+          <img src="photos/photo8.jpg" alt="Memory 8" class="zoomable" loading="lazy">
+          <img src="photos/photo9.jpg" alt="Memory 9" class="zoomable" loading="lazy">
+          <img src="photos/photo15.jpg" alt="Memory 15" class="zoomable" loading="lazy">
+          <img src="photos/photo18.jpg" alt="Memory 18" class="zoomable" loading="lazy">
 
 
         </div>
 
         <div class="column">
-          <img src="photos/photo10.jpg" alt="Memory 10" loading="lazy">
-          <img src="photos/photo11.jpg" alt="Memory 11" loading="lazy">
-          <img src="photos/photo12.jpg" alt="Memory 12" loading="lazy">
-          <img src="photos/photo13.jpg" alt="Memory 13" loading="lazy">
-          <img src="photos/photo16.jpg" alt="Memory 16" loading="lazy">
+          <img src="photos/photo10.jpg" alt="Memory 10" class="zoomable" loading="lazy">
+          <img src="photos/photo11.jpg" alt="Memory 11" class="zoomable" loading="lazy">
+          <img src="photos/photo12.jpg" alt="Memory 12" class="zoomable" loading="lazy">
+          <img src="photos/photo13.jpg" alt="Memory 13" class="zoomable" loading="lazy">
+          <img src="photos/photo16.jpg" alt="Memory 16" class="zoomable" loading="lazy">
 
         </div>
 

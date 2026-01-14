@@ -197,6 +197,28 @@
       text-align: left;
     }
 
+    @media (min-width: 700px) {
+
+      .bio {
+        display: block;
+        text-align: left;
+      }
+
+      .bio.reverse {
+        text-align: left;
+      }
+
+      .bio img {
+        float: left;
+        margin: 0 18px 10px 0;
+      }
+
+      .bio.reverse img {
+        float: right;
+        margin: 0 0 10px 18px;
+      }
+    }
+
     .bio.reverse {
       flex-direction: row-reverse;
       text-align: right;

@@ -79,6 +79,7 @@
       color: var(--fg);
       font-size: clamp(1.6rem, 2.5vw, 2.4rem);
       line-height: 1.05;
+      text-align: center
     }
 
     /* Justified centralised body text */
@@ -388,32 +389,22 @@
 
     @media (max-width: 600px) {
 
-      .timeline::before {
-        left: 12px;
-      }
-
       .event {
-        width: 100%;
-        left: 0 !important;
-        padding: 0 0 28px 36px;
-        text-align: left;
-      }
-
-      .event::before {
-        left: 8px;
+        padding: 0 18px 28px;
       }
 
       .event h3 {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
       }
 
       .event p {
-        font-size: 0.88rem;
-        line-height: 1.45;
+        font-size: 0.82rem;
+        line-height: 1.4;
       }
 
       .date {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+        margin-top: 4px;
       }
     }
 
@@ -643,11 +634,6 @@
 
 
       <h1>Gallery</h1>
-
-      <p class="lead">
-        A collection of photographs from different moments in their lives,
-        shared here as quiet memories.
-      </p>
 
       <div class="row">
 
